@@ -1,0 +1,137 @@
+/*
+### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+*/
+
+:root {
+    --dark-blue: hsl(233, 47%, 7%);
+    --desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+    --transparent-white-h1: hsla(0, 0%, 100%, 0.6);
+    --transparent-white-h1: hsla(0, 0%, 100%, 0.75);
+    --white: hsl(0, 0%, 100%);
+    --main-font-size: 1.5rem;
+}
+
+/* 1rem = 10px para pantallas con muchos px*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--dark-blue);
+    color: white;
+    font-family: Lexend Deca;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+span{
+    color: var(--soft-violet);
+}
+.textcontainer{
+    padding: 3rem;
+}
+.textcontainer__h1{
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Inter;
+}
+
+.textcontainer__div--h1{
+    font-weight: bold;
+    font-family: Inter;
+}
+
+.textcontainer__div--p{
+    text-transform: uppercase;
+}
+
+.container{
+    background-color: var(--desaturated-blue);
+    border-radius: 1rem;
+    margin: 5rem 2rem;
+    text-align: center;
+}
+
+
+
+.imgcontainer{
+    border-radius: 1rem 1rem 0rem 0rem;
+    min-height: 25rem;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("images/image-header-mobile.jpg");
+    position: relative;
+}
+.imgcontainer__div{
+    border-radius: 1rem 1rem 0rem 0rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(95, 16, 145, 0.493);
+}
+
+@media (min-width: 1157px) {
+    .container{
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 10rem;
+    }
+
+    .imgcontainer{
+        flex: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("images/image-header-desktop.jpg");
+        width: auto;
+        border-radius: 0rem 1rem 1rem 0rem;
+    }
+    .imgcontainer__div{
+        border-radius: 0rem 1rem 1rem 0rem;
+    }
+    .textcontainer{
+        flex: 50%;
+        padding: 5rem 10rem 5rem 5rem;
+        text-align: left;
+    }
+    .textcontainer__blocks{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+.attribution { font-size: 11px; 
+    text-align: center; 
+    margin: 5rem;
+}
+.attribution a { color: hsl(228, 45%, 44%); }

@@ -3,31 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preload" href="css/normalize.css" as="style">
+  <link rel="stylesheet" href="normalize.css">
   <title>Frontend Mentor | Stats preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 </head>
 <body>
-
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
+  <div class="container">
+    <div class="imgcontainer">
+      <div class="imgcontainer__div">
+      </div>  
+    </div>
+    <div class="textcontainer">
+      <h1 class="textcontainer__h1">
+        Get <span>insights</span> that help your business grow.
+      </h1>
+      <p class="textcontainer__p">
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer 
+        experience, and overall efficiency.
+      </p>
+      <div class="textcontainer__blocks">
+        <div class="textcontainer__div">
+          <h1 class="textcontainer__div--h1">10k+</h1>
+          <p class="textcontainer__div--p">companies</p>
+        </div>
+        <div class="textcontainer__div">
+          <h1 class="textcontainer__div--h1">314</h1>
+          <p class="textcontainer__div--p">templates</p>
+        </div>
+        <div class="textcontainer__div">
+          <h1 class="textcontainer__div--h1">12m+</h1>
+          <p class="textcontainer__div--p">queries</p>
+        </div>
+    </div>
+    </div>
+  </div>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Gabriela Iriarte Colmenares</a>.
   </div>
 </body>
 </html>
